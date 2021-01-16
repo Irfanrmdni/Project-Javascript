@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalkulator.css">
+    <title>Kalkulator</title>
+</head>
+
+<body>
+    <!-- Calculator 1 -->
+    <!--  <form name="calculator">
+        <h1>Calculator 1</h1>
+        <table class="tabel">
+            <tr>
+                <td>Angka 1 : <input type="number" name="angka1"></td>
+            </tr>
+            <tr>
+                <td>Angka 2 : <input type="number" name="angka2"></td>
+            </tr>
+            <tr>
+                <td>Hasil : <input type="number" name="hasil"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="tombol" onclick="tambah()" value="+">
+                    <input type="button" class="tombol" onclick="kurang()" value="-">
+                    <input type="button" class="tombol" onclick="kali()" value="*">
+                    <input type="button" class="tombol" onclick="bagi()" value="/">
+                </td>
+            </tr>
+        </table>
+    </form> -->
+
+
+    <div class="main">
+        <!-- Hasil -->
+        <form name="formAngka">
+            <input type="text" class="textview" name="isiText">
+        </form>
+        <!-- tabel-->
+        <table>
+            <!-- Button clear backspace dan + -->
+            <tr>
+                <td><input type="button" class="button" value="C" onclick="clear()"></td>
+                <td colspan="2"><input type="button" class="button" value="Bckps" onclick="bckps()"></td>
+                <td><input type="button" class="button" value="+" onclick="ins('+')"></td>
+            </tr>
+
+            <!-- Input angka 123 dan - -->
+            <tr>
+                <td><input type="button" class="button" value="1" onclick="ins(1)"></td>
+                <td><input type="button" class="button" value="2" onclick="ins(2)"></td>
+                <td><input type="button" class="button" value="3" onclick="ins(3)"></td>
+                <td><input type="button" class="button" value="-" onclick="ins('-')"></td>
+            </tr>
+
+            <!-- input 456 dan * -->
+            <tr>
+                <td><input type="button" class="button" value="4" onclick="ins(4)"></td>
+                <td><input type="button" class="button" value="5" onclick="ins(5)"></td>
+                <td><input type="button" class="button" value="6" onclick="ins(6)"></td>
+                <td><input type="button" class="button" value="*" onclick="ins('*')"></td>
+            </tr>
+
+            <!-- Input 789 dan / -->
+            <tr>
+                <td><input type="button" class="button" value="7" onclick="ins(7)"></td>
+                <td><input type="button" class="button" value="8" onclick="ins(8)"></td>
+                <td><input type="button" class="button" value="9" onclick="ins(9)"></td>
+                <td><input type="button" class="button" value="/" onclick="ins('/')"></td>
+            </tr>
+
+            <!-- input . 0 dan = -->
+            <tr>
+                <td><input type="button" class="button" value="." onclick="ins('.')"></td>
+                <td><input type="button" class="button" value="0" onclick="ins(0)"></td>
+                <td colspan="2"><input type="button" class="button" value="=" onclick="samaDengan()"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script src="kalkulator.js"></script>
+</body>
+
+</html>

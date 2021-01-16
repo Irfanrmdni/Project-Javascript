@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div class="main">
+    <form name="formAngka">
+        <input class="textview" type="text" name="isiText">
+    </form>
+    <table>
+        <tr>
+            <td><input class="button" type="button" value="C" onclick="hapusAll()"></td>
+            <td colspan="2"><input class="button" style="width: 106px" type="button" value="bcksp" onclick="bcksp()">
+            </td>
+            <td><input class="button" type="button" value="+" onclick="ins('+')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="1" onclick="ins(1)"></td>
+            <td><input class="button" type="button" value="2" onclick="ins(2)"></td>
+            <td><input class="button" type="button" value="3" onclick="ins(3)"></td>
+            <td><input class="button" type="button" value="-" onclick="ins('-')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="4" onclick="ins(4)"></td>
+            <td><input class="button" type="button" value="5" onclick="ins(5)"></td>
+            <td><input class="button" type="button" value="6" onclick="ins(6)"></td>
+            <td><input class="button" type="button" value="*" onclick="ins('*')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="7" onclick="ins(7)"></td>
+            <td><input class="button" type="button" value="8" onclick="ins(8)"></td>
+            <td><input class="button" type="button" value="9" onclick="ins(9)"></td>
+            <td><input class="button" type="button" value="/" onclick="ins('/')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="." onclick="ins('.')"></td>
+            <td><input class="button" type="button" value="0" onclick="ins(0)"></td>
+            <td colspan="2"><input class="button" style="width: 106px" type="button" value="=" onclick="samaDengan()">
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="main.js"></script>
+
+<body>
+
+</body>
+
+</html>

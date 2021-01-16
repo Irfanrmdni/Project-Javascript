@@ -1,0 +1,43 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins;
+    font-size: 16px;
+    background-color: rgb(30, 187, 226);
+
+}
+
+form {
+    width: 320px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin: 20px auto;
+    color: rgb(16, 153, 187);
+
+}
+
+input {
+    padding: 5px;
+    margin: 10px 5px;
+} */
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+}

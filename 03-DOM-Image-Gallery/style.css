@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    font-family: poppins;
+    text-align: center;
+}
+
+.container {
+    width: 615px;
+    background-color: white;
+    padding-bottom: 10px;
+    margin: 30px auto;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.container img {
+    line-height: 0;
+}
+
+img.jumbo {
+    width: 595px;
+}
+
+.thumb {
+    width: 200px;
+    float: left;
+    border: solid 2px white;
+}
+
+.thumbnail {
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+.thumb:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.container h1 {
+    color: rgb(255, 255, 255);
+    width: 595px;
+    margin: 20px auto;
+    background-color: rgb(78, 78, 78);
+}
+
+/* animasi */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.active {
+    opacity: 0.5;
+}
