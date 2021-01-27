@@ -1,0 +1,187 @@
+@use './mixin' as m;
+//fonts
+$raleway : 'Raleway', sans-serif;
+$lora : 'Lora', sans-serif;
+
+// color
+$bg-color: #FFFFFF;
+$secodary: #5AACA8;
+$third: #FF7468;
+$bg-section: #F8FCFA;
+	
+
+
+.nav {
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: transparent;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+	#{&}-area {
+		@include m.flex-box(space-between, center);
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+
+	#{&}-burger {
+		width: 30px;
+		transform: translateY(-3px);
+		cursor: pointer;
+	}
+
+
+	#{&}-menu {
+	   @include m.flex-box(center,center);
+		position: fixed;
+		z-index: 99;
+		top: -100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+		visibility: hidden;
+		transition: .3s;
+		.nav-menu-area {
+		  @include m.flex-box(space-evenly,center,column);
+		  width: 300px;
+		  height: 100vh;
+		  position: relative;
+			a {
+			 color: black;
+			 cursor: pointer;
+			 &:nth-child(6) {
+			 	border: 1px solid #37415C;
+			 	padding: 15px 30px;
+			 	border-radius: 12px;
+			 }
+		    }
+		    .nav-menu-close {
+		    	position: absolute;
+		    	width: 30px;
+		    	top: 33px;
+		    	right: 10px;
+		    	cursor: pointer;
+		    }
+
+		  @media (min-width: 400px) {
+		  	width: 400px;
+		  }
+		}
+
+	}
+
+	#{&}-menu.active {
+		visibility: visible;
+		top: 0;
+	}
+
+	#{&}-button-desktop {
+		display: none;
+	}
+
+	@media (min-width: 968px) {
+		padding: 30px 30px;
+		#{&}-burger {
+			display: none;
+		}
+
+		#{&}-menu {
+			@include m.flex-box(center, center, row);
+			position: inherit;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			right: inherit;
+			bottom: inherit;
+			width: inherit;
+			height: inherit;
+			visibility: inherit;
+			background-color: inherit;
+			.nav-menu-area {
+			 @include m.flex-box(center, center, row);
+			  width: inherit;
+			  height: inherit;
+			  position: inherit;
+			  box-shadow: inherit;
+			  a {
+				margin: 0 25px;
+				cursor: pointer;
+				color: #37415C;
+				cursor: pointer;
+				&:nth-child(6),
+				&:nth-child(7) {
+					display: none;
+				}
+
+			  }
+			    .nav-menu-close {
+			    	display: none;
+			    }
+			}
+		}
+
+		#{&}-button-desktop {
+			@include m.flex-box(center, center, row);
+
+			a {
+				margin: 0 15px;
+				color: white;
+				cursor: pointer;
+			}
+
+			.bd-sign-up {
+				padding: 15px 25px;
+				border: 1px solid white;
+				border-radius: 12px;
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		padding: 30px 60px;
+
+		#{&}-menu {
+
+			a {
+				margin: 0 30px;
+			}
+		}
+
+		#{&}-button-desktop {
+			a {
+				margin: 0 10px;
+			}
+
+			.bd-sign-up {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+.nav.active {
+	background-color: $bg-color;
+
+	@media (min-width: 968px) {
+		.bd-active {
+			color: black;
+			
+		}
+
+		.bd-sign-up {
+			border: 1px solid #37415C;
+		}
+	}
+}
+
+.nav.hide {
+   top: -200px !important;
+}
+

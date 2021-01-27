@@ -50,7 +50,7 @@
 // const waktuSekarang = new Date().getTime();
 
 // 02 - menentukan waktu tujuan (menghasilkan milidetik)
-const waktuTujuan = new Date('dec 19 2020 12:16:00'); // -> 10 februari 2021 jam 12 menit 0 detik 0
+const waktuTujuan = new Date('dec 19 2021 12:16:00'); // -> 10 februari 2021 jam 12 menit 0 detik 0
 
 // 03 - menentukan selisih waktu (waktuTujuan - waktuSekarang) (menghasilkan milidetik)
 // const selisih = waktuTujuan - waktuSekarang;

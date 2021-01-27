@@ -1,0 +1,898 @@
+/* reset start */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    border: none;
+}
+
+/* reset end */
+
+/* scrollbar custom start */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dedede;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* scrollbar custom end */
+
+html {
+    width: 100%;
+    height: 100%;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+/* navbar start */
+nav.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 0 8%;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -ms-flex-align: center;
+    position: absolute;
+    transition: all .6s ease-in-out;
+    z-index: 9999;
+}
+
+.navbar.active-navbar {
+    position: fixed;
+    background-color: rgb(26, 25, 25);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar-brand i {
+    font-size: 2.5rem;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: rgb(0, 0, 0);
+    opacity: .7;
+}
+
+.navbar-brand i:hover {
+    opacity: 1;
+}
+
+.hamburger i {
+    display: none;
+    color: black;
+}
+
+nav.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.navbar li:not(:last-child) {
+    margin-right: 45px;
+}
+
+
+nav.navbar a {
+    color: rgb(255, 255, 255);
+    opacity: .7;
+    font-size: 14px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+nav.navbar a.active {
+    opacity: 1;
+}
+
+nav.navbar a:hover {
+    opacity: 1;
+}
+
+ul.link i {
+    display: block;
+    font-size: 16px;
+    opacity: .7;
+}
+
+ul.link i:hover {
+    opacity: 1;
+}
+
+input.search {
+    display: none;
+    padding: 8px 5px;
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: unset;
+    border: solid 1px white;
+    color: white;
+}
+
+button.btn-search {
+    display: none;
+}
+
+
+
+/* navbar end */
+
+.container {
+    position: relative;
+    top: 70px;
+    padding: 0 8%;
+    margin: 0 auto;
+}
+
+/* header start */
+header.headers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 25px;
+    opacity: 0;
+    transition: all .6s ease-in-out;
+}
+
+.headers.active-headers {
+    opacity: 1;
+}
+
+header.headers .header {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-column-align: center;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-transition: all .6s ease-in-out;
+    opacity: 1;
+    transition: all .6s ease-in-out;
+}
+
+.hero-img {
+    order: 2;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    order: 1;
+}
+
+.caption h1 {
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.caption p {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 25px 0;
+}
+
+.caption a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgb(26, 25, 25);
+    color: white;
+    border-radius: 8px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.caption a:hover {
+    background-color: rgb(241, 221, 37);
+    color: rgb(26, 25, 25);
+}
+
+.circles {
+    margin: 40px auto;
+}
+
+span.circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(26, 25, 25);
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+
+.activeCircle {
+    background-color: rgb(214, 195, 21) !important;
+}
+
+span.circle:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* header end */
+
+/* product start */
+section.product {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.product.active-product {
+    opacity: 1;
+}
+
+section.product ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.product img {
+    width: 100%;
+}
+
+section.product h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+section.product p {
+    font-size: 18px;
+}
+
+/* product end */
+
+/* carousel start */
+section.carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 0;
+    text-align: center;
+    position: relative;
+    top: -80px;
+    border: solid 2.5px black;
+    padding: 20px 0;
+}
+
+.carousel-item,
+.carousel-hidden {
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.carousel .carousel-visible {
+    display: block;
+    transition: all .5s ease-in-out;
+}
+
+section.carousel .carousel-action {
+    cursor: pointer;
+}
+
+section.carousel #prev:active,
+section.carousel #next:active {
+    color: rgb(214, 195, 21);
+}
+
+section.carousel #prev {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+}
+
+section.carousel #next {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+}
+
+section.carousel .carousel-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* carousel end */
+
+/* section iphone,mac,macbook start */
+section.iphone,
+section.macbook {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: black;
+    width: 100%;
+    height: 450px;
+    margin: 35px auto;
+    padding: 0 8%;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.iphone,
+.mac,
+.macbook,
+.watch {
+    opacity: 0;
+}
+
+.iphone.active-iphone {
+    opacity: 1;
+}
+
+.mac.active-mac {
+    opacity: 1;
+}
+
+.macbook.active-macbook {
+    opacity: 1;
+}
+
+.watch.active-watch {
+    opacity: 1;
+}
+
+.bg-iphone img,
+.bg-macbook img {
+    width: 100%;
+}
+
+.bg-watch img {
+    width: 75%;
+}
+
+.bg-mac img {
+    width: 85%;
+}
+
+.caption-iphone h2,
+.caption-mac h2,
+.caption-macbook h2,
+.caption-watch h2 {
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.caption-iphone p,
+.caption-mac p,
+.caption-macbook p,
+.caption-watch p {
+    font-size: 16px;
+    margin: 28px 0;
+    line-height: 32px;
+}
+
+.caption-iphone a,
+.caption-macbook a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    transition: .4s ease-in-out;
+}
+
+.caption-iphone a:hover,
+.caption-macbook a:hover {
+    color: rgb(214, 195, 21);
+}
+
+/* section iphone,mac,macbook end */
+
+/* section mac start */
+section.mac,
+section.watch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 450px;
+    margin: 35px auto;
+    padding: 0 8%;
+    color: rgb(0, 0, 0);
+    transition: all .5s ease-in-out;
+}
+
+.bg-mac,
+.bg-watch {
+    order: 2;
+}
+
+.caption-mac a,
+.caption-watch a {
+    color: black;
+}
+
+.caption-mac a:hover,
+.caption-watch a:hover {
+    color: rgb(214, 195, 21);
+}
+
+/* section mac end */
+
+.backTop {
+    position: fixed;
+    z-index: 9999;
+    bottom: 30px;
+    right: 0;
+    padding: 0 8%;
+    font-size: 45px;
+    color: rgb(214, 195, 21);
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+.backTop.activeTop {
+    opacity: 1;
+    bottom: 50px;
+}
+
+footer.footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin: 0 auto;
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.footer.active-footer {
+    opacity: 1;
+}
+
+footer.footer ul li a {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+footer.footer ul li a:hover {
+    color: rgb(214, 195, 21);
+}
+
+footer.footer h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+footer.footer i {
+    font-size: 65px;
+}
+
+.copy {
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.copy p {
+    font-size: 14px;
+    line-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile */
+@media screen and (max-width: 767px) {
+
+    /* navbar start */
+    nav.navbar {
+        padding: 0 5%;
+    }
+
+    nav.navbar ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        height: 70%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background-color: rgb(26, 25, 25);
+        z-index: -100;
+        -webkit-transform: translate(-100%);
+        transform: translateY(-100%);
+        opacity: .5;
+        -webkit-transition: all .6s ease-in-out;
+        transition: all .6s ease-in-out;
+    }
+
+    nav.navbar ul.slide {
+        -webkit-transform: translate(69px);
+        transform: translateY(69px);
+        border-top: solid 2px rgb(255, 255, 255);
+        border-radius: 0 0 20px 20px;
+        opacity: 1;
+    }
+
+    nav.navbar li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .hamburger i {
+        display: block;
+        font-size: 25px;
+    }
+
+    .navbar-brand i {
+        font-size: 2rem;
+    }
+
+    ul.link i {
+        display: none;
+        font-size: 16px;
+    }
+
+    input.search {
+        display: block;
+        padding: 8px 5px;
+        width: 250px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: unset;
+        border: solid 1px white;
+        color: white;
+    }
+
+    /* navbar end */
+
+    /* header start */
+    .container {
+        padding: 0 5%;
+    }
+
+    header.headers {
+        height: auto;
+    }
+
+    .hero-img {
+        order: 1;
+        grid-column: span 2;
+    }
+
+    .caption {
+        order: 3;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .caption h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .caption p {
+        font-size: 15px;
+        line-height: 24px;
+        margin: 25px 0;
+    }
+
+    .caption a {
+        display: inline-block;
+        padding: 14px 90px;
+        font-size: 0.7rem;
+    }
+
+    span.circle {
+        width: 14px;
+        height: 14px;
+    }
+
+    span.circle:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    /* header end */
+
+    /* section product start */
+    section.product {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    section.product ul {
+        display: block;
+    }
+
+
+    section.product img {
+        width: 50%;
+    }
+
+    section.product h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    section.product li:not(:first-child) {
+        margin-top: 35px;
+    }
+
+    /* section product end */
+
+    button.btn-search {
+        display: block;
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        color: rgb(26, 25, 25);
+        border-radius: 8px;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    /* section iphone,mac,macbook start */
+    section.iphone,
+    section.macbook {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        gap: 0;
+        text-align: center;
+        padding: 30px 8%;
+    }
+
+    .bg-iphone img,
+    .bg-mac img,
+    .bg-macbook img {
+        width: 80%;
+    }
+
+    .bg-watch img {
+        width: 65%;
+    }
+
+    .caption-iphone h2,
+    .caption-mac h2,
+    .caption-macbook h2,
+    .caption-watch h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .caption-iphone p,
+    .caption-mac p,
+    .caption-macbook p,
+    .caption-watch p {
+        font-size: 14px;
+        margin: 20px 0;
+        line-height: 28px;
+    }
+
+    /* section iphone,mac,macbook end */
+
+    /* section mac start */
+    section.mac,
+    section.watch {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 30px 8%;
+    }
+
+    .caption-mac,
+    .caption-watch {
+        order: 2;
+    }
+
+    .bg-mac,
+    .bg-watch {
+        order: 1;
+    }
+
+    /* section mac end */
+
+    /* carousel start */
+    section.carousel #prev {
+        left: 0;
+    }
+
+    section.carousel #next {
+        right: 0;
+    }
+
+    section.carousel .carousel-item img {
+        max-width: 350px;
+    }
+
+    /* carousel end */
+    footer.footer {
+        justify-items: center;
+        text-align: center;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .copy {
+        height: 40px;
+    }
+
+    .copy p {
+        font-size: 12px;
+        line-height: 40px;
+    }
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* navbar start */
+    nav.navbar li:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    /* navbar end */
+
+    /* header start */
+    .caption h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .caption p {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 20px 0;
+    }
+
+    .caption a {
+        display: inline-block;
+        padding: 15px 40px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: rgb(26, 25, 25);
+        color: white;
+        border-radius: 8px;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    section.product {
+        margin-top: -20px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    section.product ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section.product img {
+        width: 70%;
+    }
+
+    section.product h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    /* header end */
+
+    /* section iphone,mac,macbook start */
+    .caption-iphone h2,
+    .caption-mac h2,
+    .caption-macbook h2,
+    .caption-watch h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .caption-iphone p,
+    .caption-mac p,
+    .caption-macbook p,
+    .caption-watch p {
+        font-size: 14px;
+        margin: 20px 0;
+        line-height: 28px;
+    }
+
+    /* section iphone,mac,macbook end */
+
+    /* carousel start */
+    section.carousel #prev {
+        left: 5%;
+    }
+
+    section.carousel #next {
+        right: 5%;
+    }
+
+    section.carousel .carousel-item img {
+        max-width: 500px;
+    }
+
+    /* carousel end */
+}
