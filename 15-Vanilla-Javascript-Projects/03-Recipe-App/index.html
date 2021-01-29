@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Recipe App</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <!--Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+   <!--Css-->
+   <link rel="stylesheet" href="style.css">
+   <!--Javascript-->
+   <script src="script.js" defer></script>
+</head>
+
+<body>
+   <!--Mobile Start-->
+   <div class="container-mobile">
+      <!--Header Start-->
+      <header>
+         <input type="text" placeholder="Search" id="search-input">
+         <button id="search"><i class="fa-2x fas fa-search"></i></button>
+      </header>
+      <!--Header End-->
+
+      <!--Fav-Container Start-->
+      <div class="fav-container">
+         <h3>Makanan Favorit</h3>
+         <ul class="fav-makan" id="fav-makan">
+         </ul>
+      </div>
+      <!--Fav-Container End-->
+
+      <!-- Makanan start -->
+      <div class="makanan" id="makanan"></div>
+      <!-- Makanan end -->
+
+      <div class="meal-info-container" id="meal-popup">
+         <div class="meal-info" id="meal-info">
+            <button id="close-popup" class="close-popup"><i class="fa fa-window-close"></i></button>
+            <h1>Meal title</h1>
+            <img src="https://www.themealdb.com/images/media/meals/1550441275.jpg" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta amet doloribus provident delectus fuga
+               nesciunt voluptatibus similique dolorum assumenda tempore?</p>
+            <ul>
+               <li>ing 1 / measure</li>
+               <li>ing 1 / measure</li>
+               <li>ing 1 / measure</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!--Mobile End-->
+</body>
+
+</html>
