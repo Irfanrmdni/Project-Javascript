@@ -1,207 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
    box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   outline: none;
-   border: none;
-   list-style-type: none;
 }
 
 body {
+   background: #ece9e6;
+   background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+   background: linear-gradient(to right, #ffffff, #ece9e6);
    display: flex;
    align-items: center;
    justify-content: center;
-   font-family: 'Poppins', sans-serif;
-   width: 100%;
-   height: 100%;
-   scroll-behavior: smooth;
-   background: #3494E6;
-   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
-   background: linear-gradient(to right, #EC6EAD, #3494E6);
-
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   min-height: 100vh;
 }
 
 img {
    max-width: 100%;
 }
 
+.mobile-container {
+   background-color: #fff;
+   box-shadow: 0 0 10px 2px #3333331a;
+   border-radius: 3px;
+   overflow: hidden;
+   width: 400px;
+}
+
 header {
    display: flex;
    align-items: center;
    justify-content: center;
+   padding: 1rem;
 }
 
-button#search {
-   cursor: pointer;
-   background-color: transparent;
-}
-
-input {
-   width: 100%;
-   background-color: rgb(233, 233, 233);
-   padding: 10px 7px;
+header input {
+   background-color: #eee;
+   border: none;
    border-radius: 3px;
-   margin-right: 20px;
    font-family: inherit;
+   padding: 0.5rem 1rem;
 }
 
-.container-mobile {
-   max-width: 768px;
-   height: auto;
-   overflow: hidden;
-   margin: 50px auto;
-   padding: 50px;
-   background-color: white;
-   color: rgb(48, 46, 46);
-   box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-   border-radius: 8px;
+header button {
+   background-color: transparent;
+   border: none;
+   color: rgb(138, 129, 141);
+   font-size: 1.5rem;
+   margin-left: 10px;
 }
 
 .fav-container {
-   margin: 25px 0;
-   padding: 32px;
-   border-radius: 8px;
+   background-color: rgb(243, 225, 255);
+   padding: 0.25rem 1rem;
    text-align: center;
-   color: white;
-   background: #232526;
-   background: -webkit-linear-gradient(to right, #414345, #232526);
-   background: linear-gradient(to right, #414345, #232526);
 }
 
-.fav-container h3 {
-   width: 100%;
-   margin: 0 auto;
-   background-color: rgb(243, 185, 27);
-   color: #232526;
-   font-size: 1.5rem;
-   margin-bottom: 30px;
-   border-radius: 3px;
-}
-
-ul.fav-makan {
+.fav-meals {
    display: flex;
-   justify-content: flex-start;
-   align-items: center;
    flex-wrap: wrap;
+   justify-content: center;
+   list-style-type: none;
+   padding: 0;
 }
 
-ul.fav-makan li img {
-   width: 100px;
-   height: 100px;
-   object-fit: cover;
+.fav-meals li {
+   cursor: pointer;
+   position: relative;
+   margin: 5px;
+   width: 75px;
+}
+
+.fav-meals li .clear {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   opacity: 0;
+   position: absolute;
+   top: -0.5rem;
+   right: -0.5rem;
+   font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear {
+   opacity: 1;
+}
+
+.fav-meals li img {
+   border: 2px solid #ffffff;
    border-radius: 50%;
-   border: solid 3px rgb(243, 185, 27);
-   background-color: white;
+   box-shadow: 0 0 10px 2px #3333331a;
+   object-fit: cover;
+   height: 70px;
+   width: 70px;
 }
 
-ul.fav-makan li span {
-   font-size: 14px;
-   display: block;
+.fav-meals li span {
+   display: inline-block;
+   font-size: 0.9rem;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 75px;
 }
 
-ul.fav-makan li {
-   margin-right: 30px;
-   margin-top: 20px;
+.meal {
+   border-radius: 3px;
+   box-shadow: 0 0 10px 2px #3333331a;
+   cursor: pointer;
+   margin: 1.5rem;
+   overflow: hidden;
 }
 
-.makan-header {
+.meal-header {
    position: relative;
 }
 
-.makan-header img {
-   width: 100%;
-   height: 350px;
-   object-fit: cover;
-   border-radius: 8px;
-
-}
-
-span.random {
+.meal-header .random {
    position: absolute;
-   font-size: 18px;
-   font-weight: 500;
-   top: 15px;
-   background-color: #232526;
-   color: rgb(243, 185, 27);
-   padding: 5px 18px;
-   border-top-right-radius: 8px;
-   border-bottom-right-radius: 8px;
+   top: 1rem;
+   background-color: #fff;
+   padding: 0.25rem 1rem;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
 }
 
-.makan-body {
+.meal-header img {
+   object-fit: cover;
+   height: 250px;
+   width: 100%;
+}
+
+.meal-body {
    display: flex;
    align-items: center;
    justify-content: space-between;
-
+   padding: 1rem;
 }
 
-.makan-body h4 {
-   font-size: 16px;
-   margin: 10px;
+.meal-body h4 {
+   margin: 0;
 }
 
-.makan-body .fav-btn {
+.meal-body .fav-btn {
+   border: none;
    background-color: transparent;
-   color: rgb(192, 192, 192);
+   color: rgb(197, 188, 188);
    cursor: pointer;
+   font-size: 1.2rem;
 }
 
-.fav-btn.active {
-   color: rgb(243, 185, 27);
+.meal-body .fav-btn.active {
+   color: rebeccapurple;
 }
 
-.meal-info-container {
+.popup-container {
+   background-color: rgba(0, 0, 0, 0.5);
    display: flex;
    align-items: center;
    justify-content: center;
    position: fixed;
-   top: 0;
    left: 0;
    right: 0;
+   top: 0;
    bottom: 0;
-   background-color: rgba(0, 0, 0, .4);
-   transition: all .4s ease-in-out;
 }
 
-.meal-info {
+.popup-container.hidden {
+   opacity: 0;
+   pointer-events: none;
+}
+
+.popup {
+   background-color: #fff;
+   border-radius: 5px;
+   padding: 0 2rem;
    position: relative;
+   overflow: auto;
+   max-height: 100vh;
    max-width: 600px;
    width: 100%;
-   border-radius: 4px;
-   padding: 2rem;
-   margin: 0 auto;
-   background-color: white;
+}
+
+.popup .close-popup {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   font-size: 1.5rem;
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
 }
 
 .meal-info h1 {
    text-align: center;
-   font-size: 25px;
-}
-
-.meal-info p {
-   font-size: 14px;
-}
-
-.meal-info img {
-   width: 100%;
-   height: 300px;
-   background-size: cover;
-   margin: 10px 0;
-}
-
-.meal-info-container.hidden {
-   opacity: 0;
-   user-select: none;
-   pointer-events: none;
-}
-
-button.close-popup {
-   position: absolute;
-   top: 1rem;
-   right: 1rem;
-   font-size: 20px;
-   background-color: transparent;
-   cursor: pointer;
 }
