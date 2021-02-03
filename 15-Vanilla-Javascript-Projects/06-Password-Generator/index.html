@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Title</title>
+   <title>Password Generator</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <!--Css-->
    <link rel="stylesheet" href="style.css">
@@ -13,7 +13,49 @@
 </head>
 
 <body>
-   <h1>Hello irpan</h1>
+   <!--Password container start-->
+   <div class="pw-container">
+      <!--Password header start-->
+      <div class="pw-header">
+         <div class="pw">
+            <span id="pw">asdad1231321</span>
+            <button id="copy" class="copy">Copy</button>
+         </div>
+      </div>
+      <!--Password header end-->
+
+      <!--Password body start-->
+      <div class="pw-body">
+         <div class="form-control">
+            <label for="length">Password Length</label>
+            <input type="number" id="length" min="2" max="30" value="15">
+         </div>
+
+         <div class="form-control">
+            <label for="upper">Contain Uppercase Letters</label>
+            <input type="checkbox" id="upper">
+         </div>
+
+         <div class="form-control">
+            <label for="lower">Contain Lowercase Letters</label>
+            <input type="checkbox" id="lower">
+         </div>
+
+         <div class="form-control">
+            <label for="number">Contain Number</label>
+            <input type="checkbox" id="number">
+         </div>
+
+         <div class="form-control">
+            <label for="symbol">Contain Symbols</label>
+            <input type="checkbox" id="symbol">
+         </div>
+
+         <button id="generate" class="generate">Generate Password</button>
+      </div>
+      <!--Password body end-->
+   </div>
+   <!--Password container end-->
 </body>
 
 </html>
