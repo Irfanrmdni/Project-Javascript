@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/fc5b4b5e48.js" crossorigin="anonymous"></script>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+
+        <form class="form" id="form">
+
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" id="username" name="username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password" name="password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirm Password</label>
+                <input type="password" placeholder="Password" id="password2" name="password2">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button type="submit" id="submit">SUBMIT</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

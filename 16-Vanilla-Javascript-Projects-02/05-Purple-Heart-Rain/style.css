@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    border: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Hind Siliguri', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: fixed;
+    top: -1vh;
+    transform: translateY(0);
+    animation: fail 3s linear forwards;
+}
+
+@keyframes fail {
+    to {
+        transform: translateY(105vh);
+    }
+}

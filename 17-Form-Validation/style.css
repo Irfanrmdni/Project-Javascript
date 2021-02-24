@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background: white;
+    color: rgb(40, 39, 41);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h2 {}
+
+.form-control {
+    margin: 35px 0;
+    position: relative;
+}
+
+.form-control input {
+    width: 100%;
+    border: solid 2px rgb(207, 207, 207);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #cc2e2e;
+}
+
+.form-control label {
+    font-size: 18px;
+    display: inline-block;
+}
+
+.form-control small {
+    margin-top: 10px;
+}
+
+.form-control i {
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+    background-color: white;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #cc2e2e;
+    background-color: white;
+    visibility: visible;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.form-control.success small {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-control.form-control.error small {
+    visibility: visible;
+    color: #cc2e2e;
+}
+
+.form button {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    background-color: rebeccapurple;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
